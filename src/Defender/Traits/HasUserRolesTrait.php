@@ -27,7 +27,7 @@ trait HasUserRolesTrait {
 	 */
 	public function hasRole($role)
 	{
-		$roles = $this->roles->lists('name');
+		$roles = $this->roles->lists('name')->all();
 
 		return in_array($role, $roles);
 	}
